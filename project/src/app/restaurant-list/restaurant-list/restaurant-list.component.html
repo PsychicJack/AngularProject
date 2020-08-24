@@ -1,1 +1,4 @@
-<p *ngFor="let restaurant of restaurantList">{{restaurant.name}}</p>
+<app-restaurant
+  *ngFor="let item of restaurantList"
+  [restaurant]="item"
+></app-restaurant>

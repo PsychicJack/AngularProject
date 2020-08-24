@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navigation.component.css'],
 })
 export class NavigationComponent implements OnInit {
-  public navElements = ['Home', 'Login', 'Register'];
-  
+  public navList = ['Home', 'Login', 'Register'];
+
   constructor() {}
 
   ngOnInit(): void {}

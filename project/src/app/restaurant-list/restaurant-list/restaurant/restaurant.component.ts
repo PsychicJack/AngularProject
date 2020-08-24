@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-restaurant',
@@ -7,12 +7,13 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./restaurant.component.css'],
 })
 export class RestaurantComponent implements OnInit {
-
   @Input() public restaurant;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
-  ngOnInit(): void {
-   
+  ngOnInit(): void {}
+
+  onClick(id) {
+    this.router.navigate(["/restaurants", id]);
   }
 }

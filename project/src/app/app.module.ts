@@ -7,6 +7,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { RestaurantListModule } from '../app/restaurant-list/restaurant-list.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthModule } from '../app/auth/auth.module';
+import { RestaurantDetailsModule } from './restaurant-details/restaurant-details.module';
 
 @NgModule({
   declarations: [AppComponent, NavigationComponent],
@@ -16,6 +17,7 @@ import { AuthModule } from '../app/auth/auth.module';
     RestaurantListModule,
     HttpClientModule,
     AuthModule,
+    RestaurantDetailsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,0 +1,103 @@
+{
+  "restournats": [
+    {
+      "id": 1,
+      "name": "prvi",
+      "description": "nesto nesto nesto nesto nesto nesto",
+      "numberOfReviews": 7,
+      "averageReview": 3.6,
+      "address": "negde 123",
+      "openTime": "09:00",
+      "colseTime": "23:00"
+    },
+    {
+      "id": 2,
+      "name": "drugi",
+      "description": "nesto3 2323 nesto nesto 3213 nesto312 nesto nesto",
+      "numberOfReviews": 86,
+      "averageReview": 4.3,
+      "address": "lalala 123",
+      "openTime": "11:00",
+      "colseTime": "00:00"
+    },
+    {
+      "id": 3,
+      "name": "treci",
+      "description": "nesto333333333 nesto nesto n5555555555sto nesto nesto",
+      "numberOfReviews": 33,
+      "averageReview": 3.3,
+      "address": "negde 333",
+      "openTime": "08:00",
+      "colseTime": "21:00"
+    },
+    {
+      "id": 4,
+      "name": "cetvrti",
+      "description": "nesto 999999 999nesto nesto nesto 9999999 nesto nesto",
+      "numberOfReviews": 3,
+      "averageReview": 5,
+      "address": "hello fam",
+      "openTime": "12:00",
+      "colseTime": "00:00"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "userName": "user123",
+      "password": "helloworld123"
+    },
+    {
+      "id": 2,
+      "userName": "ukiGamesPro",
+      "password": "uki123123"
+    },
+    {
+      "id": 3,
+      "userName": "helloThere",
+      "password": "helloThere"
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "restourantID": 1,
+      "userID": 1,
+      "comment": "da add a  dad   adad ",
+      "timeOfVisit": "10:00",
+      "rating": 4
+    },
+    {
+      "id": 2,
+      "restourantID": 1,
+      "userID": 2,
+      "comment": "da add a  dad d fgd fgd f  adad ",
+      "timeOfVisit": "12:00",
+      "rating": 4
+    },
+    {
+      "id": 3,
+      "restourantID": 1,
+      "userID": 3,
+      "comment": "da add a  dadgd d gdfg dfg    adad ",
+      "timeOfVisit": "17:00",
+      "rating": 1
+    },
+    {
+      "id": 4,
+      "restourantID": 2,
+      "userID": 1,
+      "comment": "da add agd g g   dad   adad ",
+      "timeOfVisit": "18:00",
+      "rating": 2
+    },
+    {
+      "id": 5,
+      "restourantID": 3,
+      "userID": 3,
+      "comment": "da add aasgh gsg a  dad   adad ",
+      "timeOfVisit": "14:00",
+      "rating": 5
+    }
+  ]
+}

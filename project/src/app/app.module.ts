@@ -8,6 +8,7 @@ import { RestaurantListModule } from '../app/restaurant-list/restaurant-list.mod
 import { HttpClientModule } from '@angular/common/http';
 import { AuthModule } from '../app/auth/auth.module';
 import { RestaurantDetailsModule } from './restaurant-details/restaurant-details.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [AppComponent, NavigationComponent],
@@ -18,6 +19,7 @@ import { RestaurantDetailsModule } from './restaurant-details/restaurant-details
     HttpClientModule,
     AuthModule,
     RestaurantDetailsModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

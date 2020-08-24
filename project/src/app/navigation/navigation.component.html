@@ -1,5 +1,5 @@
 <nav>
   <div *ngFor="let navItem of navList">
-    <a href="#"> {{ navItem }}</a>
+    <a href="#" [routerLink]="[navItem.location]" routerLinkActive="router-link-active" > {{ navItem.text }}</a>
   </div>
 </nav>

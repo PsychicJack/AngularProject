@@ -1,5 +1,5 @@
 {
-  "restournats": [
+  "restaurants": [
     {
       "id": 1,
       "name": "prvi",
@@ -61,7 +61,7 @@
   "reviews": [
     {
       "id": 1,
-      "restourantID": 1,
+      "restaurantID": 1,
       "userID": 1,
       "comment": "da add a  dad   adad ",
       "timeOfVisit": "10:00",
@@ -69,7 +69,7 @@
     },
     {
       "id": 2,
-      "restourantID": 1,
+      "restaurantID": 1,
       "userID": 2,
       "comment": "da add a  dad d fgd fgd f  adad ",
       "timeOfVisit": "12:00",
@@ -77,7 +77,7 @@
     },
     {
       "id": 3,
-      "restourantID": 1,
+      "restaurantID": 1,
       "userID": 3,
       "comment": "da add a  dadgd d gdfg dfg    adad ",
       "timeOfVisit": "17:00",
@@ -85,7 +85,7 @@
     },
     {
       "id": 4,
-      "restourantID": 2,
+      "restaurantID": 2,
       "userID": 1,
       "comment": "da add agd g g   dad   adad ",
       "timeOfVisit": "18:00",
@@ -93,7 +93,7 @@
     },
     {
       "id": 5,
-      "restourantID": 3,
+      "restaurantID": 3,
       "userID": 3,
       "comment": "da add aasgh gsg a  dad   adad ",
       "timeOfVisit": "14:00",

@@ -7,10 +7,14 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { RestaurantListModule } from '../app/restaurant-list/restaurant-list.module';
 import { HttpClientModule } from '@angular/common/http';
 
-
 @NgModule({
   declarations: [AppComponent, NavigationComponent],
-  imports: [BrowserModule, AppRoutingModule, RestaurantListModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    RestaurantListModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

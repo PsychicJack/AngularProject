@@ -1,9 +1,14 @@
 import { Injectable } from '@angular/core';
+import { API_URL_Restaurants } from '../../config';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class RestaurantService {
+  constructor(private http: HttpClient) {}
 
-  constructor() { }
+  getAllRestaurants() {
+    return this.http.get(API_URL_Restaurants);
+  }
 }

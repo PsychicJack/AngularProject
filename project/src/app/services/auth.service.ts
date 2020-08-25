@@ -11,18 +11,6 @@ export class AuthService {
   constructor(private http: HttpClient, private router: Router) {}
 
   login(username: string, password: string) {
-    const headers = new HttpHeaders();
-    headers.append('Content-Type', 'application/json');
-    const params = new HttpParams()
-      .set('username', username)
-      .set('password', password);
-    return this.http
-      .get(`${API_URL_Users}?password=helloworld123`, { headers: headers})
-     /* .subscribe((data) => {
-        if (data.id != null && data.id != undefined) {
-          localStorage.setItem('userId', data.id.toString());
-          this.router.navigate(['/']);
-        } else localStorage.setItem('userId', 'not found');
-      });*/
+    return this.http.get<IUser[]>(`${API_URL_Users}`);
   }
 }

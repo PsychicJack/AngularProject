@@ -31,14 +31,10 @@ export class LoginComponent implements OnInit {
       this.warning = 'Please fill out both fields';
     else {
       this.authService.login(this.username, this.password).subscribe((data) => {
-        let foundUser: IUser = undefined;
-        data.forEach((user: IUser) => {
-          if (user.username == this.username && user.password == this.password)
-            foundUser = user;
-        });
-        if (foundUser == undefined) this.warning = 'User not found';
+        console.log(data);
+        if (data[0] == undefined) this.warning = 'User not found';
         else {
-          localStorage.setItem('userId', foundUser.id.toString());
+          localStorage.setItem('userId', data[0].id.toString());
           this.router.navigate(['']);
         }
       });

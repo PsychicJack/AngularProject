@@ -44,17 +44,17 @@
   "users": [
     {
       "id": 1,
-      "userName": "user123",
+      "username": "user123",
       "password": "helloworld123"
     },
     {
       "id": 2,
-      "userName": "ukiGamesPro",
+      "username": "ukiGamesPro",
       "password": "uki123123"
     },
     {
       "id": 3,
-      "userName": "helloThere",
+      "username": "helloThere",
       "password": "helloThere"
     }
   ],

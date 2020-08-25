@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AuthModule } from '../app/auth/auth.module';
 import { RestaurantDetailsModule } from './restaurant-details/restaurant-details.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, NavigationComponent],
@@ -20,6 +21,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AuthModule,
     RestaurantDetailsModule,
     NgbModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

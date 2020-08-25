@@ -9,12 +9,12 @@ import { IRestaurant } from 'src/app/models/restaurant';
 })
 export class RestaurantListComponent implements OnInit {
   public restaurantList: IRestaurant[] = [];
+
   constructor(private restaurantService: RestaurantService) {}
 
   ngOnInit(): void {
     this.restaurantService.getAllRestaurants().subscribe((data) => {
       this.restaurantList = data;
-      
     });
   }
 }

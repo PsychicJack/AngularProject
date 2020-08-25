@@ -17,6 +17,7 @@ export class AuthService {
         if (data != null && data != undefined) {
           localStorage.setItem('userId', data.id.toString());
           this.router.navigate(['']);
+          return data.id;
         } else return -1;
       });
   }

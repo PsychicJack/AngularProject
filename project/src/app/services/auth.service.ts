@@ -13,4 +13,11 @@ export class AuthService {
   login(username: string, password: string) {
     return this.http.get<IUser[]>(`${API_URL_Users}`);
   }
+
+  logOut()
+  {
+    localStorage.removeItem("userId");
+    this.router.navigate([""]);
+  }
+  
 }

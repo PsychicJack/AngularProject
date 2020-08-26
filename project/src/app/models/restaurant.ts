@@ -6,5 +6,5 @@ export interface IRestaurant {
   averageReview: number;
   address: string;
   openTime: string;
-  colseTime: string;
+  closeTime: string;
 }

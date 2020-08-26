@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RestaurantDetailsComponent } from './restaurant-details/restaurant-details.component';
+import { ReviewsComponent } from './reviews/reviews.component';
+import { ReviewComponent } from './reviews/review/review.component';
 
 @NgModule({
-  declarations: [RestaurantDetailsComponent],
+  declarations: [RestaurantDetailsComponent, ReviewsComponent, ReviewComponent],
   imports: [CommonModule],
   exports: [RestaurantDetailsComponent],
 })

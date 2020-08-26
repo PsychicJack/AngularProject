@@ -1,1 +1,9 @@
-<p>{{restaurnat.name}}</p>
+<div>
+  <h3>{{ restaurnat.name }}</h3>
+  <p>{{ restaurnat.description }}</p>
+  <p>{{ restaurnat.address }}</p>
+  <p>
+    {{ restaurnat.averageReview + " (" + restaurnat.numberOfReviews + ")" }}
+  </p>
+  <p>Open from {{ restaurnat.openTime }} to {{ restaurnat.closeTime }}</p>
+</div>

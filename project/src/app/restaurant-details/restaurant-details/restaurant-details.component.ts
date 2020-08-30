@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RestaurantService } from 'src/app/services/restaurant.service';
 import { ActivatedRoute } from '@angular/router';
-import { IRestaurant } from 'src/app/models/restaurant';
+import { IRestaurant, Restaurant } from 'src/app/models/restaurant';
 
 @Component({
   selector: 'app-restaurant-details',
@@ -9,7 +9,7 @@ import { IRestaurant } from 'src/app/models/restaurant';
   styleUrls: ['./restaurant-details.component.css'],
 })
 export class RestaurantDetailsComponent implements OnInit {
-  public restaurnat: IRestaurant;
+  public restaurnat: IRestaurant = new Restaurant();
 
   constructor(
     private service: RestaurantService,

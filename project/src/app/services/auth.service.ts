@@ -30,4 +30,11 @@ export class AuthService {
         console.log(response);
       });
   }
+
+  isLoggedIn() {
+    return (
+      localStorage.getItem('userId') != null &&
+      localStorage.getItem('userId') != undefined
+    );
+  }
 }

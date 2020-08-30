@@ -11,15 +11,13 @@ export class NavigationComponent implements OnInit {
     { text: 'Home', location: '' },
     { text: 'Register', location: 'register' },
   ];
-  public loginRedirect = "login";
+  public loginRedirect = 'login';
   public isLoggedIn: boolean;
 
   constructor(public authService: AuthService) {}
 
   ngOnInit(): void {
-    this.isLoggedIn =
-      localStorage.getItem('userId') != null &&
-      localStorage.getItem('userId') != undefined;
+    this.isLoggedIn = this.authService.isLoggedIn();
   }
 
   logOutClick() {

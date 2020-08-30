@@ -1,2 +1,3 @@
+<app-submit-review *ngIf="isLoggedIn"></app-submit-review>
 <h3>Reviews:</h3>
 <app-review *ngFor="let review of reviewList" [review]="review"></app-review>

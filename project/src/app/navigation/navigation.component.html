@@ -2,4 +2,13 @@
   <div *ngFor="let navItem of navList">
     <a href="#" [routerLink]="[navItem.location]" routerLinkActive="router-link-active" > {{ navItem.text }}</a>
   </div>
+  <div>
+    <div *ngIf="isLoggedIn; then thenBlock; else elseBlock"></div>
+    <ng-template #thenBlock>
+      <a href="#" (click) = "logOutClick()">Log out</a>
+    </ng-template>
+    <ng-template #elseBlock>
+      <a href="#" [routerLink]="[loginRedirect]" routerLinkActive="router-link-active">Log in</a>
+    </ng-template>
+  </div>
 </nav>

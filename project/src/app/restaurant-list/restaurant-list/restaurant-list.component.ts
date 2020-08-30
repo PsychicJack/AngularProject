@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RestaurantService } from 'src/app/services/restaurant.service';
-import { IRestaurant } from 'src/app/models/restaurant';
+import { IRestaurant, Restaurant } from 'src/app/models/restaurant';
+import { NGB_DATEPICKER_DATE_ADAPTER_FACTORY } from '@ng-bootstrap/ng-bootstrap/datepicker/adapters/ngb-date-adapter';
 
 @Component({
   selector: 'app-restaurant-list',
@@ -13,12 +14,17 @@ export class RestaurantListComponent implements OnInit {
   constructor(private restaurantService: RestaurantService) {}
 
   ngOnInit(): void {
-    this.restaurantService.getAllRestaurants().subscribe((data) => {
-      this.restaurantList = data;
-    });
+    this.search('');
   }
 
   search(value) {
-    console.log(value);
+    this.restaurantList = [];
+    this.restaurantService.search(value).subscribe((data) => {
+      data.forEach((el) => {
+        console.log(el);
+        if (this.restaurantList.filter((el2) => el2.id == el.id).length == 0)
+          this.restaurantList.push(el);
+      });
+    });
   }
 }

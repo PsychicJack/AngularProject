@@ -118,6 +118,22 @@
       "comment": "da add aasgh gsg a  dad   adad ",
       "timeOfVisit": "14:00",
       "rating": 5
+    },
+    {
+      "comment": "sdasdad",
+      "rating": 2,
+      "timeOfVisit": "02:31",
+      "restaurantID": 1,
+      "userID": 0,
+      "id": 8
+    },
+    {
+      "comment": "sdasdad",
+      "rating": 2,
+      "timeOfVisit": "02:31",
+      "restaurantID": 1,
+      "userID": 0,
+      "id": 9
     }
   ]
 }

@@ -12,6 +12,7 @@ import { AuthService } from 'src/app/services/auth.service';
 export class ReviewsComponent implements OnInit {
   public reviewList: IReview[];
   public isLoggedIn: boolean;
+  public restaurantID: number;
 
   constructor(
     private reviewService: ReviewService,
@@ -20,9 +21,10 @@ export class ReviewsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.restaurantID = this.route.snapshot.params.id;
     this.isLoggedIn = this.authService.isLoggedIn();
     this.reviewService
-      .getReviewsForARestaurant(this.route.snapshot.params.id)
+      .getReviewsForARestaurant(this.restaurantID)
       .subscribe((data) => {
         this.reviewList = data;
       });

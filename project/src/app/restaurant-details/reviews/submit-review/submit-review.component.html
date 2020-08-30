@@ -1,1 +1,11 @@
-<p>submit-review works!</p>
+<textarea
+  cols="60"
+  rows="5"
+  name="comment"
+  [(ngModel)]="review.comment"
+></textarea>
+<input type="number" max="5" min="0" [(ngModel)]="review.rating" />
+<input type="time" [(ngModel)]="review.timeOfVisit" />
+<input type="text" [(ngModel)]="test" />
+
+<button (click)="submitClick()">Submit</button>

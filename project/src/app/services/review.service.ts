@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { API_URL_Reviews } from 'src/config';
-import { IReview } from "../models/review";
+import { IReview } from '../models/review';
 
 @Injectable({
   providedIn: 'root',
@@ -11,5 +11,15 @@ export class ReviewService {
 
   getReviewsForARestaurant(id: number) {
     return this.http.get<IReview[]>(`${API_URL_Reviews}?restaurantID=${id}`);
+  }
+  giveAReviewToARestaurant(review: IReview) {
+    console.log(review);
+    this.http
+      .post(API_URL_Reviews, JSON.stringify(review), {
+        headers: new HttpHeaders().append('Content-Type', 'application/json'),
+      })
+      .subscribe((resp) => {
+        console.log(resp);
+      });
   }
 }

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RestaurantService } from 'src/app/services/restaurant.service';
-import { IRestaurant, Restaurant } from 'src/app/models/restaurant';
-import { NGB_DATEPICKER_DATE_ADAPTER_FACTORY } from '@ng-bootstrap/ng-bootstrap/datepicker/adapters/ngb-date-adapter';
+import { IRestaurant } from 'src/app/models/restaurant';
 
 @Component({
   selector: 'app-restaurant-list',

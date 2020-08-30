@@ -17,4 +17,8 @@ export class RestaurantListComponent implements OnInit {
       this.restaurantList = data;
     });
   }
+
+  search(value) {
+    console.log(value);
+  }
 }

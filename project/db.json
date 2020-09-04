@@ -45,37 +45,50 @@
     {
       "id": 1,
       "username": "user123",
-      "password": "helloworld123"
+      "password": "helloworld123",
+      "role": "user"
     },
     {
       "id": 2,
       "username": "ukiGamesPro",
-      "password": "uki123123"
+      "password": "uki123123",
+      "role": "user"
     },
     {
       "id": 3,
       "username": "helloThere",
-      "password": "helloThere"
+      "password": "helloThere",
+      "role": "user"
     },
     {
       "username": "as",
       "password": "asd",
-      "id": 4
+      "id": 4,
+      "role": "user"
     },
     {
       "username": "as",
       "password": "asd",
-      "id": 5
+      "id": 5,
+      "role": "user"
     },
     {
       "username": "aaa",
       "password": "aa",
-      "id": 6
+      "id": 6,
+      "role": "user"
     },
     {
       "username": "aaa",
       "password": "aa",
-      "id": 7
+      "id": 7,
+      "role": "user"
+    },
+    {
+      "username": "aaa",
+      "password": "aa",
+      "role": "user",
+      "id": 8
     }
   ],
   "reviews": [

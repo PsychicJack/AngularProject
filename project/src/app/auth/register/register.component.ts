@@ -16,10 +16,11 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {}
 
   register() {
-    this.repeatPassword += "a";
+    this.repeatPassword += 'a';
     this.authService.register({
       username: this.username,
-      password: this.password
+      password: this.password,
+      role: 'user',
     });
   }
 }

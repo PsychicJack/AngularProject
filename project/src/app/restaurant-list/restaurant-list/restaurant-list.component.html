@@ -1,5 +1,7 @@
 <app-search (searchEvent)="search($event)"></app-search>
-<app-restaurant
-  *ngFor="let item of restaurantList"
-  [restaurant]="item"
-></app-restaurant>
+<div class="list-group restaurant-list">
+  <app-restaurant
+    *ngFor="let item of restaurantList"
+    [restaurant]="item"
+  ></app-restaurant>
+</div>

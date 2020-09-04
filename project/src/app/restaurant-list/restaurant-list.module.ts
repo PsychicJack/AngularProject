@@ -4,10 +4,11 @@ import { RestaurantListComponent } from './restaurant-list/restaurant-list.compo
 import { RestaurantComponent } from './restaurant-list/restaurant/restaurant.component';
 import { FormsModule } from '@angular/forms';
 import { SearchComponent } from './restaurant-list/search/search.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [RestaurantListComponent, RestaurantComponent, SearchComponent],
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, NgbModule],
   exports: [RestaurantListComponent],
 })
 export class RestaurantListModule {}

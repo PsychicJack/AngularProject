@@ -4,8 +4,6 @@
       "id": 1,
       "name": "prvi",
       "description": "nesto nesto nesto nesto nesto nesto",
-      "numberOfReviews": 7,
-      "averageReview": 3.6,
       "address": "negde 123",
       "openTime": "09:00",
       "closeTime": "23:00"
@@ -14,8 +12,6 @@
       "id": 2,
       "name": "drugi",
       "description": "nesto3 2323 nesto nesto 3213 nesto312 nesto nesto",
-      "numberOfReviews": 86,
-      "averageReview": 4.3,
       "address": "lalala 123",
       "openTime": "11:00",
       "closeTime": "00:00"
@@ -24,8 +20,6 @@
       "id": 3,
       "name": "treci",
       "description": "nesto333333333 nesto nesto n5555555555sto nesto nesto",
-      "numberOfReviews": 33,
-      "averageReview": 3.3,
       "address": "negde 333",
       "openTime": "08:00",
       "closeTime": "21:00"
@@ -34,8 +28,6 @@
       "id": 4,
       "name": "cetvrti",
       "description": "nesto 999999 999nesto nesto nesto 9999999 nesto nesto",
-      "numberOfReviews": 3,
-      "averageReview": 5,
       "address": "hello fam",
       "openTime": "12:00",
       "closeTime": "00:00"

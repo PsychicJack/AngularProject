@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { API_URL_Restaurants } from '../../config';
 import { HttpClient } from '@angular/common/http';
-import { IRestaurant } from '../models/restaurant';
+import { IRestaurant, Restaurant } from '../models/restaurant';
 import { merge } from 'rxjs';
 
 @Injectable({
@@ -15,7 +15,7 @@ export class RestaurantService {
   }
 
   getRestaurantById(id: number) {
-    return this.http.get<IRestaurant>(`${API_URL_Restaurants}/${id}`);
+    return this.http.get<Restaurant>(`${API_URL_Restaurants}/${id}`);
   }
 
   search(query: string) {

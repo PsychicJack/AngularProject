@@ -1,10 +1,34 @@
-<div>
-  <h3>{{ restaurant.name }}</h3>
-  <p>{{ restaurant.description }}</p>
-  <p>{{ restaurant.address }}</p>
-  <p>
-    {{ restaurant.averageReview + " (" + restaurant.numberOfReviews + ")" }}
-  </p>
-  <p>Open from {{ restaurant.openTime }} to {{ restaurant.closeTime }}</p>
+<div class="container">
+  <div class="row mt-1">
+    <div class="col col-lg-2 border border-primary p-2 rounded-left">Name:</div>
+    <div class="col border border-left-0 border-secondary p-2 rounded-right">
+      {{ restaurant.name }}
+    </div>
+  </div>
+  <div class="row mt-1">
+    <div class="col col-lg-2 border border-primary p-2 rounded-left">Description:</div>
+    <div class="col border border-left-0 border-secondary p-2 rounded-right">
+      {{ restaurant.description }}
+    </div>
+  </div>
+  <div class="row mt-1">
+    <div class="col col-lg-2 border border-primary p-2 rounded-left">Address:</div>
+    <div class="col border border-left-0 border-secondary p-2 rounded-right">
+      {{ restaurant.address }}
+    </div>
+  </div>
+  <div class="row mt-1">
+    <div class="col col-lg-2 border border-primary p-2 rounded-left">Average review: </div>
+    <div class="col border border-left-0 border-secondary p-2 rounded-right">
+      {{ restaurant.averageReview + " (" + restaurant.numberOfReviews + ")" }}
+    </div>
+  </div>
+  <div class="row mt-1">
+    <div class="col col-lg-2 border border-primary p-2 rounded-left">Open from: </div>
+    <div class="col border border-left-0 border-secondary p-2 rounded-right">
+      {{ restaurant.openTime }} to {{ restaurant.closeTime }}
+    </div>
+  </div>
 </div>
+
 <app-reviews></app-reviews>

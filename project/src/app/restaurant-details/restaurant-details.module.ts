@@ -5,10 +5,16 @@ import { ReviewsComponent } from './reviews/reviews.component';
 import { ReviewComponent } from './reviews/review/review.component';
 import { SubmitReviewComponent } from './reviews/submit-review/submit-review.component';
 import { FormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
-  declarations: [RestaurantDetailsComponent, ReviewsComponent, ReviewComponent, SubmitReviewComponent],
-  imports: [CommonModule, FormsModule],
+  declarations: [
+    RestaurantDetailsComponent,
+    ReviewsComponent,
+    ReviewComponent,
+    SubmitReviewComponent,
+  ],
+  imports: [CommonModule, FormsModule, NgbModule],
   exports: [RestaurantDetailsComponent],
 })
 export class RestaurantDetailsModule {}

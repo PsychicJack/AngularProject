@@ -139,6 +139,14 @@
       "restaurantID": 1,
       "userID": 0,
       "id": 9
+    },
+    {
+      "comment": "aasda",
+      "rating": 2,
+      "timeOfVisit": "03:12",
+      "restaurantID": 4,
+      "userID": 0,
+      "id": 10
     }
   ]
 }

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { API_URL_Restaurants } from '../../config';
 import { HttpClient } from '@angular/common/http';
-import { IRestaurant, Restaurant } from '../models/restaurant';
+import { IRestaurant, Restaurant } from '../models/restaurant.model';
 import { merge } from 'rxjs';
 import { map } from 'rxjs/operators';
 

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { API_URL_Reviews } from 'src/config';
-import { IReview } from '../models/review';
+import { IReview } from '../models/review.model';
 
 @Injectable({
   providedIn: 'root',

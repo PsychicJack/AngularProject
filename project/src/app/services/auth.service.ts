@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { API_URL_Users } from 'src/config';
-import { IUser } from '../models/user';
+import { IUser } from '../models/user.model';
 import { Router } from '@angular/router';
 
 @Injectable({

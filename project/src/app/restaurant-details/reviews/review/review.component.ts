@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { IReview } from 'src/app/models/review';
-import { IUser } from 'src/app/models/user';
+import { IReview } from 'src/app/models/review.model';
+import { IUser } from 'src/app/models/user.model';
 import { UserService } from '../../../services/user.service';
 import { ReviewService } from 'src/app/services/review.service';
 

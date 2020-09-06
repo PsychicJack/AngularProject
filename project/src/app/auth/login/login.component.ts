@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
-import { IUser } from 'src/app/models/user';
+import { IUser } from 'src/app/models/user.model';
 import { wrapReference } from '@angular/compiler/src/render3/util';
 import { isNumber } from '@ng-bootstrap/ng-bootstrap/util/util';
 import { Router } from '@angular/router';

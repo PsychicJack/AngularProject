@@ -16,7 +16,6 @@ export class ReviewComponent implements OnInit {
 
   ngOnInit(): void {
     this.userService.getUserById(this.review.userID).subscribe((data) => {
-      console.log(data);
       this.user = data[0];
     });
   }

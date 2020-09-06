@@ -12,13 +12,9 @@ export class ReviewService {
   getReviewsForARestaurant(id: number) {
     return this.http.get<IReview[]>(`${API_URL_Reviews}?restaurantID=${id}`);
   }
-  giveAReviewToARestaurant(review: IReview) {
-    this.http
-      .post(API_URL_Reviews, JSON.stringify(review), {
-        headers: new HttpHeaders().append('Content-Type', 'application/json'),
-      })
-      .subscribe((resp) => {
-        console.log(resp);
-      });
+  reviewRestaurant(review: IReview) {
+    return this.http.post(API_URL_Reviews, JSON.stringify(review), {
+      headers: new HttpHeaders().append('Content-Type', 'application/json'),
+    });
   }
 }

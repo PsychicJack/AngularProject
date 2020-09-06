@@ -17,6 +17,8 @@ export class SubmitReviewComponent implements OnInit {
   submitClick() {
     this.review.restaurantID = +this.restaurantID;
     this.review.userID = +localStorage.getItem('userID');
-    this.reviewService.giveAReviewToARestaurant(this.review);
+    this.reviewService.reviewRestaurant(this.review).subscribe(() => {
+      window.location.reload();
+    });
   }
 }

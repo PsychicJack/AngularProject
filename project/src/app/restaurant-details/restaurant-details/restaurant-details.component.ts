@@ -22,12 +22,7 @@ export class RestaurantDetailsComponent implements OnInit {
     this.restaurant = new Restaurant();
     const id: number = parseInt(this.route.snapshot.paramMap.get('id'));
     this.restaurantService.getRestaurantById(id).subscribe((data) => {
-      this.restaurant.id = data.id;
-      this.restaurant.address = data.address;
-      this.restaurant.description = data.description;
-      this.restaurant.closeTime = data.closeTime;
-      this.restaurant.openTime = data.openTime;
-      this.restaurant.name = data.name;
+      Restaurant.copy(this.restaurant, data);
     });
     this.reviewService.getReviewsForARestaurant(id).subscribe((data) => {
       this.restaurant.numberOfReviews = data.length;

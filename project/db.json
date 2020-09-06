@@ -6,7 +6,8 @@
       "description": "nesto nesto nesto nesto nesto nesto",
       "address": "negde 123",
       "openTime": "09:00",
-      "closeTime": "23:00"
+      "closeTime": "23:00",
+      "location": "Nis"
     },
     {
       "id": 2,
@@ -14,7 +15,8 @@
       "description": "nesto3 2323 nesto nesto 3213 nesto312 nesto nesto",
       "address": "lalala 123",
       "openTime": "11:00",
-      "closeTime": "00:00"
+      "closeTime": "00:00",
+      "location": "Novi Sad"
     },
     {
       "id": 3,
@@ -22,7 +24,8 @@
       "description": "nesto333333333 nesto nesto n5555555555sto nesto nesto",
       "address": "negde 333",
       "openTime": "08:00",
-      "closeTime": "21:00"
+      "closeTime": "21:00",
+      "location": "Beograd"
     },
     {
       "id": 4,
@@ -30,7 +33,8 @@
       "description": "nesto 999999 999nesto nesto nesto 9999999 nesto nesto",
       "address": "hello fam",
       "openTime": "12:00",
-      "closeTime": "00:00"
+      "closeTime": "00:00",
+      "location": "Nis"
     }
   ],
   "users": [

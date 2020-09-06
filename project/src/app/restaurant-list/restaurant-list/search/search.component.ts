@@ -19,6 +19,9 @@ export class SearchComponent implements OnInit {
     });
   }
   search(value: string) {
-    this.searchEvent.emit(value);
+    this.searchEvent.emit({
+      query: value,
+      location: this.selectedLocation,
+    });
   }
 }

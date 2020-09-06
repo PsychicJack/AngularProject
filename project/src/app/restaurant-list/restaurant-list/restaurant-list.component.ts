@@ -13,12 +13,12 @@ export class RestaurantListComponent implements OnInit {
   constructor(private restaurantService: RestaurantService) {}
 
   ngOnInit(): void {
-    this.search('');
+    this.search({query: "", location: ""});
   }
 
   search(value) {
     this.restaurantList = [];
-    this.restaurantService.search(value).subscribe((data) => {
+    this.restaurantService.search(value.query, value.location).subscribe((data) => {
       data.forEach((el) => {
         if (this.restaurantList.filter((el2) => el2.id == el.id).length == 0)
           this.restaurantList.push(el);

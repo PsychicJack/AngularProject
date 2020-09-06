@@ -24,9 +24,6 @@ import {ReviewReducer} from '../app/reducers/review.reducer';
     RestaurantDetailsModule,
     NgbModule,
     FormsModule,
-    StoreModule.forRoot({
-      review: ReviewReducer,
-    }),
   ],
   providers: [],
   bootstrap: [AppComponent],

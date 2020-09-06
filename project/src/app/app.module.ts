@@ -10,8 +10,6 @@ import { AuthModule } from '../app/auth/auth.module';
 import { RestaurantDetailsModule } from './restaurant-details/restaurant-details.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
-import { StoreModule } from '@ngrx/store';
-import {ReviewReducer} from '../app/reducers/review.reducer';
 
 @NgModule({
   declarations: [AppComponent, NavigationComponent],

@@ -4,7 +4,7 @@ import { ReviewAction, REVIEW_TYPES } from '../actions/review.actions';
 const initalState: Array<IReview> = [
   {
     id: 0,
-    comment: '',
+    comment: 'hello',
     rating: 0,
     restaurantID: 0,
     userID: 0,

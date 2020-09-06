@@ -4,3 +4,11 @@
   <h3>Reviews:</h3>
   <app-review *ngFor="let review of reviewList" [review]="review"></app-review>
 </div>
+
+<div>
+  <ul>
+    <li *ngFor="let item of reviewList$ | async">
+      {{item.comment}}
+    </li>
+  </ul>
+</div>

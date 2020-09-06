@@ -12,7 +12,7 @@ export class AddReview implements Action {
 }
 
 export class RemoveReview implements Action {
-  readonly type = REVIEW_TYPES.ADD_REVIEW;
+  readonly type = REVIEW_TYPES.REMOVE_REVIEW;
   constructor(public payload: IReview) {}
 }
 

@@ -6,6 +6,8 @@ import { ReviewComponent } from './reviews/review/review.component';
 import { SubmitReviewComponent } from './reviews/submit-review/submit-review.component';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { StoreModule } from '@ngrx/store';
+import { ReviewReducer } from '../reducers/review.reducer';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ReviewComponent,
     SubmitReviewComponent,
   ],
-  imports: [CommonModule, FormsModule, NgbModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    NgbModule,
+    StoreModule.forRoot({
+      review: ReviewReducer,
+    }),
+  ],
   exports: [RestaurantDetailsComponent],
 })
 export class RestaurantDetailsModule {}

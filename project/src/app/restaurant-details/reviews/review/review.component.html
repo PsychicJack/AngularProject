@@ -5,5 +5,8 @@
     </ng-container>
     <h6 class="card-subtitle text-muted">{{ review.rating }}</h6>
     <p class="card-text">{{ review.comment }}</p>
+    <div *ngIf="role == 'admin'" class="d-flex justify-content-end">
+      <button class="btn btn-danger" (click)="deleteReview()">Delete</button>
+    </div>
   </div>
 </div>

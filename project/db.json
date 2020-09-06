@@ -147,6 +147,22 @@
       "restaurantID": 4,
       "userID": 0,
       "id": 10
+    },
+    {
+      "comment": "asdasd",
+      "rating": 5,
+      "timeOfVisit": "02:34",
+      "restaurantID": 1,
+      "userID": 0,
+      "id": 11
+    },
+    {
+      "comment": "dddd",
+      "rating": 3,
+      "timeOfVisit": "15:12",
+      "restaurantID": 1,
+      "userID": 4,
+      "id": 12
     }
   ]
 }

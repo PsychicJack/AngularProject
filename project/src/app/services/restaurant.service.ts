@@ -3,6 +3,7 @@ import { API_URL_Restaurants } from '../../config';
 import { HttpClient } from '@angular/common/http';
 import { IRestaurant, Restaurant } from '../models/restaurant';
 import { merge } from 'rxjs';
+import 'rxjs/add/operator/map';
 
 @Injectable({
   providedIn: 'root',
@@ -25,5 +26,9 @@ export class RestaurantService {
         `${API_URL_Restaurants}?address_like=${query}`
       )
     );
+  }
+
+  getDistinctLocations() {
+    return this.http.get<IRestaurant[]>(API_URL_Restaurants)
   }
 }

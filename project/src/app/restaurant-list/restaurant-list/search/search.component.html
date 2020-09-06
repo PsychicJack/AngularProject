@@ -2,5 +2,16 @@
   <div class="form-group search-div">
     <input type="search" #query class="form-control search" />
   </div>
+  <!--<mat-form-field appearance="fill">
+    <mat-label>Location</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let food of foods" [value]="food.value">
+        {{food.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field> -->
   <button (click)="search(query.value)" class="btn btn-primary">Search</button>
+</div>
+<div>
+  <p *ngFor="let location of locations">{{ location }}</p>
 </div>

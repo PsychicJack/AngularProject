@@ -27,8 +27,12 @@ export class AuthService {
         headers: new HttpHeaders().append('Content-Type', 'application/json'),
       })
       .subscribe((response) => {
-        console.log(response);
+        this.router.navigate(['login']);
       });
+  }
+
+  checkIfUsernameIsTaken(username: string) {
+    return this.http.get<IUser>(`${API_URL_Users}?username=${username}`);
   }
 
   isLoggedIn() {

@@ -81,6 +81,30 @@
       "password": "aa",
       "role": "user",
       "id": 8
+    },
+    {
+      "username": "admin123",
+      "password": "admin123",
+      "role": "admin",
+      "id": 9
+    },
+    {
+      "username": "askdaksdk",
+      "password": "gggg",
+      "role": "user",
+      "id": 10
+    },
+    {
+      "username": "ffff",
+      "password": "ff",
+      "role": "user",
+      "id": 11
+    },
+    {
+      "username": "ff",
+      "password": "ff",
+      "role": "user",
+      "id": 12
     }
   ],
   "reviews": [

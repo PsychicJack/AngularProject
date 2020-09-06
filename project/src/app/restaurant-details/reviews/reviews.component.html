@@ -2,5 +2,8 @@
   *ngIf="isLoggedIn"
   [restaurantID]="restaurantID"
 ></app-submit-review>
-<h3>Reviews:</h3>
-<app-review *ngFor="let review of reviewList" [review]="review"></app-review>
+
+<div class="w-75 mx-auto mt-4">
+  <h3>Reviews:</h3>
+  <app-review *ngFor="let review of reviewList" [review]="review"></app-review>
+</div>

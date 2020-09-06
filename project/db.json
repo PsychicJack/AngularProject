@@ -163,6 +163,14 @@
       "restaurantID": 1,
       "userID": 4,
       "id": 12
+    },
+    {
+      "comment": "dddd",
+      "rating": 3,
+      "timeOfVisit": "03:12",
+      "restaurantID": 1,
+      "userID": 4,
+      "id": 13
     }
   ]
 }

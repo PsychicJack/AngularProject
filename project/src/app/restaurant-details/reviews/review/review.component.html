@@ -1,5 +1,7 @@
 <div class="card mt-1">
-  <h5 class="card-title">{{ user.username }}</h5>
+  <ng-container *ngIf="user">
+    <h5 class="card-title">{{ user.username }}</h5>
+  </ng-container>
   <h6 class="card-subtitle text-muted">{{ review.rating }}</h6>
-  <p class="card-text">{{review.comment}}</p>
+  <p class="card-text">{{ review.comment }}</p>
 </div>

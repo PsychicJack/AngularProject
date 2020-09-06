@@ -1,6 +1,9 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 import { Review, IReview } from '../../../models/review.model';
 import { ReviewService } from 'src/app/services/review.service';
+import { Store } from '@ngrx/store';
+import { AppState } from 'src/app/app.state';
+import { AddReview } from 'src/app/actions/review.actions';
 
 @Component({
   selector: 'app-submit-review',
@@ -11,9 +14,13 @@ export class SubmitReviewComponent implements OnInit {
   @Input() restaurantID: number;
   public review: IReview = new Review();
   public reviewExists: boolean = false;
-  constructor(public reviewService: ReviewService) {}
+  constructor(
+    public reviewService: ReviewService,
+    private store: Store<AppState>
+  ) {}
 
   ngOnInit(): void {
+    this.store.select('review');
     this.reviewService
       .checkIfReviewExists(+localStorage.getItem('userID'), this.restaurantID)
       .subscribe((data) => {
@@ -25,8 +32,9 @@ export class SubmitReviewComponent implements OnInit {
   submitClick() {
     this.review.restaurantID = this.restaurantID;
     this.review.userID = +localStorage.getItem('userID');
+    this.store.dispatch(new AddReview(this.review));
     this.reviewService.reviewRestaurant(this.review).subscribe(() => {
-      window.location.reload();
+      this.reviewExists = true;
     });
   }
   editClick() {

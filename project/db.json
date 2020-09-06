@@ -157,20 +157,12 @@
       "id": 11
     },
     {
-      "comment": "dddd",
+      "comment": "ffffggg",
       "rating": 3,
-      "timeOfVisit": "15:12",
-      "restaurantID": 1,
+      "timeOfVisit": "15:33",
+      "restaurantID": "1",
       "userID": 4,
       "id": 12
-    },
-    {
-      "comment": "dddd",
-      "rating": 3,
-      "timeOfVisit": "03:12",
-      "restaurantID": 1,
-      "userID": 4,
-      "id": 13
     }
   ]
 }

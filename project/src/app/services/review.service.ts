@@ -17,4 +17,20 @@ export class ReviewService {
       headers: new HttpHeaders().append('Content-Type', 'application/json'),
     });
   }
+
+  checkIfReviewExists(userID: number, restaurantID: number) {
+    return this.http.get<IReview>(
+      `${API_URL_Reviews}?userID=${userID}&restaurantID=${restaurantID}`
+    );
+  }
+
+  deleteReview(reviewID: number) {
+    return this.http.delete(`${API_URL_Reviews}/${reviewID}`);
+  }
+
+  editReview(review: IReview) {
+    return this.http.put(`${API_URL_Reviews}/${review.id}`, JSON.stringify(review), {
+      headers: new HttpHeaders().append('Content-Type', 'application/json'),
+    });
+  }
 }

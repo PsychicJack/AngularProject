@@ -20,7 +20,6 @@ export class RestaurantListComponent implements OnInit {
     this.restaurantList = [];
     this.restaurantService.search(value).subscribe((data) => {
       data.forEach((el) => {
-        console.log(el);
         if (this.restaurantList.filter((el2) => el2.id == el.id).length == 0)
           this.restaurantList.push(el);
       });

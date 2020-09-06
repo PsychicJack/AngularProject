@@ -26,7 +26,7 @@ export class ReviewsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.reviewList$ = this.store.select("review");
+    this.reviewList$ = this.store.select('review');
     this.restaurantID = this.route.snapshot.params.id;
     this.isLoggedIn = this.authService.isLoggedIn();
     this.reviewService

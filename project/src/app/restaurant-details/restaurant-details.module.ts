@@ -8,6 +8,8 @@ import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { StoreModule } from '@ngrx/store';
 import { ReviewReducer } from '../reducers/review.reducer';
+import { EffectsModule } from '@ngrx/effects';
+import { ReviewEffects } from '../effects/review.effect';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,7 @@ import { ReviewReducer } from '../reducers/review.reducer';
     CommonModule,
     FormsModule,
     NgbModule,
+    EffectsModule.forRoot([ReviewEffects]),
     StoreModule.forRoot({
       review: ReviewReducer,
     }),

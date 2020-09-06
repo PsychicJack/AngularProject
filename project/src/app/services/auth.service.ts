@@ -17,7 +17,7 @@ export class AuthService {
   }
 
   logOut() {
-    localStorage.removeItem('userId');
+    localStorage.removeItem('userID');
     this.router.navigate(['']);
   }
 
@@ -33,8 +33,8 @@ export class AuthService {
 
   isLoggedIn() {
     return (
-      localStorage.getItem('userId') != null &&
-      localStorage.getItem('userId') != undefined
+      localStorage.getItem('userID') != null &&
+      localStorage.getItem('userID') != undefined
     );
   }
 }

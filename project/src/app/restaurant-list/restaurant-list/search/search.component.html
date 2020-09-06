@@ -1,17 +1,13 @@
-<div class="d-flex justify-content-center search-main-div">
-  <div class="form-group search-div">
-    <input type="search" #query class="form-control search" />
+<div class="d-flex justify-content-center search-main-div mt-4">
+  <div class="form-group w-50">
+    <input type="search" #query class="form-control" />
   </div>
-  <!--<mat-form-field appearance="fill">
-    <mat-label>Location</mat-label>
-    <mat-select>
-      <mat-option *ngFor="let food of foods" [value]="food.value">
-        {{food.viewValue}}
-      </mat-option>
-    </mat-select>
-  </mat-form-field> -->
-  <button (click)="search(query.value)" class="btn btn-primary">Search</button>
-</div>
-<div>
-  <p *ngFor="let location of locations">{{ location }}</p>
+  
+  <select class="form-control location-dropdown ml-2" [(ngModel)]="selectedLocation" *ngIf="locations">
+ <!--   <option [ngValue]="" hidden [value]=""  selected>Location</option>-->
+    <option *ngFor="let location of locations" [ngValue]="location">
+      {{ location }}
+    <option>
+  </select>
+  <button (click)="search(query.value)" class="btn btn-primary ml-2">Search</button>
 </div>

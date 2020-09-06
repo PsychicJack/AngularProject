@@ -3,7 +3,7 @@ import { API_URL_Restaurants } from '../../config';
 import { HttpClient } from '@angular/common/http';
 import { IRestaurant, Restaurant } from '../models/restaurant';
 import { merge } from 'rxjs';
-import 'rxjs/add/operator/map';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
@@ -29,6 +29,6 @@ export class RestaurantService {
   }
 
   getDistinctLocations() {
-    return this.http.get<IRestaurant[]>(API_URL_Restaurants)
+    return this.http.get<IRestaurant[]>(API_URL_Restaurants);
   }
 }

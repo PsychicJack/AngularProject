@@ -8,14 +8,14 @@ import { RestaurantService } from 'src/app/services/restaurant.service';
 })
 export class SearchComponent implements OnInit {
   @Output() public searchEvent = new EventEmitter();
-  public locations: string[];
+  public locations: string[] = undefined;
+  public selectedLocation: string;
   constructor(private restaurantService: RestaurantService) {}
 
   ngOnInit(): void {
     this.locations = [];
     this.restaurantService.getDistinctLocations().subscribe((data) => {
-      console.log(data);
-     // this.locations.push(data);
+      this.locations = [...new Set(data.map((el) => el.location))];
     });
   }
   search(value: string) {

@@ -13,7 +13,6 @@ export class ReviewService {
     return this.http.get<IReview[]>(`${API_URL_Reviews}?restaurantID=${id}`);
   }
   giveAReviewToARestaurant(review: IReview) {
-    console.log(review);
     this.http
       .post(API_URL_Reviews, JSON.stringify(review), {
         headers: new HttpHeaders().append('Content-Type', 'application/json'),

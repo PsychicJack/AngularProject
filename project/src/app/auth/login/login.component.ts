@@ -35,7 +35,9 @@ export class LoginComponent implements OnInit {
         if (data[0] == undefined) this.warning = 'User not found';
         else {
           localStorage.setItem('userID', data[0].id.toString());
-          this.router.navigate(['']); 
+          localStorage.setItem('userRole', data[0].role);
+          //this.router.navigate(['']);
+          window.location.href = 'http://localhost:4200/';
         }
       });
     }

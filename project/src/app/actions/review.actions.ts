@@ -2,15 +2,15 @@ import { Action } from '@ngrx/store';
 import { IReview } from '../models/review.model';
 
 export enum REVIEW_TYPES {
-  ADD_REVIEW = '[REVIEW] Add',
-  ADD_REVIEW_SUCCESS = '[REVIEW] Add Success',
-  ADD_REVIEW_FAILURE = '[REVIEW] Add Failure',
-  REMOVE_REVIEW = '[REVIEW] Remove',
+  ADD_REVIEW =            '[REVIEW] Add',
+  ADD_REVIEW_SUCCESS =    '[REVIEW] Add Success',
+  ADD_REVIEW_FAILURE =    '[REVIEW] Add Failure',
+  REMOVE_REVIEW =         '[REVIEW] Remove',
   REMOVE_REVIEW_SUCCESS = '[REVIEW] Remove Success',
   REMOVE_REVIEW_FAILURE = '[REVIEW] Remove Failure',
-  LOAD_REVIEWS = '[REVIEW] Load',
-  LOAD_REVIEWS_SUCCESS = '[REVIEW] Load Success',
-  LOAD_REVIEWS_FAILURE = '[REVIEW] Load Failure',
+  LOAD_REVIEWS =          '[REVIEW] Load',
+  LOAD_REVIEWS_SUCCESS =  '[REVIEW] Load Success',
+  LOAD_REVIEWS_FAILURE =  '[REVIEW] Load Failure',
 }
 
 export class AddReview implements Action {

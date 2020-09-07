@@ -56,7 +56,7 @@ export function ReviewReducer(
         list: action.payload,
         loading: false,
       };
-    case REVIEW_TYPES.LOAD_REVIEWS_SUCCESS:
+    case REVIEW_TYPES.LOAD_REVIEWS_FAILURE:
       return {
         ...state,
         error: action.payload,

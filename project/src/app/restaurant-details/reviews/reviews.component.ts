@@ -6,6 +6,7 @@ import { AuthService } from 'src/app/services/auth.service';
 import { Store } from '@ngrx/store';
 import { AppState } from '../../app.state';
 import { Observable } from 'rxjs';
+import { LoadReview } from 'src/app/actions/review.actions';
 
 @Component({
   selector: 'app-reviews',
@@ -16,7 +17,10 @@ export class ReviewsComponent implements OnInit {
   public reviewList: IReview[];
   public isLoggedIn: boolean;
   public restaurantID: number;
+
   public reviewList$: Observable<Array<IReview>>;
+  public loading$: Observable<Boolean>;
+  public error$: Observable<Error>;
 
   constructor(
     private reviewService: ReviewService,
@@ -26,7 +30,12 @@ export class ReviewsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.reviewList$ = this.store.select('review');
+   /* this.reviewList$ = this.store.select((store) => store.review.list);
+    this.loading$ = this.store.select((store) => store.review.loading);
+    this.error$ = this.store.select((store) => store.review.error);
+
+    this.store.dispatch(new LoadReview());*/
+
     this.restaurantID = this.route.snapshot.params.id;
     this.isLoggedIn = this.authService.isLoggedIn();
     this.reviewService

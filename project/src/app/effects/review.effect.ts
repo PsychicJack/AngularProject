@@ -16,36 +16,46 @@ import { of } from 'rxjs';
 
 @Injectable()
 export class ReviewEffects {
-  @Effect() loadReviews$ = createEffect(() =>
-    this.actions$.pipe(
-      ofType<LoadReview>(REVIEW_TYPES.LOAD_REVIEWS),
-      mergeMap((data) => {
-        return this.reviewService.getReviewsForARestaurant(data.payload).pipe(
-          map((data) => new LoadReviewSuccess(data)),
-          catchError((error) => of(new LoadReviewFailure(error)))
-        );
-      })
-    )
+  @Effect() loadReviews$ = /*createEffect(
+    () =>*/
+      this.actions$.pipe(
+        ofType<LoadReview>(REVIEW_TYPES.LOAD_REVIEWS),
+        mergeMap((data) => {
+          return this.reviewService.getReviewsForARestaurant(data.payload).pipe(
+            map((data) => new LoadReviewSuccess(data)),
+            catchError((error) => of(new LoadReviewFailure(error)))
+          );
+        })
+      )/*,
+    { dispatch: false }
+  );*/
+
+  @Effect() addReview$ = createEffect(
+    () =>
+      this.actions$.pipe(
+        ofType<AddReview>(REVIEW_TYPES.ADD_REVIEW),
+        mergeMap((data) =>
+          this.reviewService.reviewRestaurant(data.payload).pipe(
+            map(() => new AddReview(data.payload)),
+            catchError((error) => of(new AddReviewFailure(error)))
+          )
+        )
+      ),
+    { dispatch: false }
   );
 
-  @Effect() addReview$ = this.actions$.pipe(
-    ofType<AddReview>(REVIEW_TYPES.ADD_REVIEW),
-    mergeMap((data) =>
-      this.reviewService.reviewRestaurant(data.payload).pipe(
-        map(() => new AddReview(data.payload)),
-        catchError((error) => of(new AddReviewFailure(error)))
-      )
-    )
-  );
-
-  @Effect() removeReview$ = this.actions$.pipe(
-    ofType<RemoveReview>(REVIEW_TYPES.REMOVE_REVIEW),
-    mergeMap((data) =>
-      this.reviewService.deleteReview(data.payload).pipe(
-        map(() => new RemoveReview(data.payload)),
-        catchError((error) => of(new RemoveReviewFailure(error)))
-      )
-    )
+  @Effect() removeReview$ = createEffect(
+    () =>
+      this.actions$.pipe(
+        ofType<RemoveReview>(REVIEW_TYPES.REMOVE_REVIEW),
+        mergeMap((data) =>
+          this.reviewService.deleteReview(data.payload).pipe(
+            map(() => new RemoveReview(data.payload)),
+            catchError((error) => of(new RemoveReviewFailure(error)))
+          )
+        )
+      ),
+    { dispatch: false }
   );
 
   constructor(

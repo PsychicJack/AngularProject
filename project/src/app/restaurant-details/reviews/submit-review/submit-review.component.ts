@@ -1,9 +1,9 @@
-import { Component, OnInit, Input} from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Review, IReview } from '../../../models/review.model';
 import { ReviewService } from 'src/app/services/review.service';
 import { Store } from '@ngrx/store';
 import { AppState } from 'src/app/app.state';
-import { AddReview } from 'src/app/actions/review.actions';
+import { AddReview, RemoveReview } from 'src/app/actions/review.actions';
 
 @Component({
   selector: 'app-submit-review',
@@ -32,9 +32,11 @@ export class SubmitReviewComponent implements OnInit {
   submitClick() {
     this.review.restaurantID = this.restaurantID;
     this.review.userID = +localStorage.getItem('userID');
-    this.store.dispatch(new AddReview(this.review));
-    this.reviewService.reviewRestaurant(this.review).subscribe(() => {
-      this.reviewExists = true;
+    //this.store.dispatch(new AddReview(this.review));
+   // this.reviewExists = true;
+     this.reviewService.reviewRestaurant(this.review).subscribe(() => {
+     // this.reviewExists = true;
+      window.location.reload();
     });
   }
   editClick() {
@@ -43,7 +45,8 @@ export class SubmitReviewComponent implements OnInit {
     });
   }
   deleteClick() {
-    this.reviewService.deleteReview(this.review.id).subscribe(() => {
+   // this.store.dispatch(new RemoveReview(this.review.id));
+     this.reviewService.deleteReview(this.review.id).subscribe(() => {
       console.log('deleted', this.review.id);
       window.location.reload();
     });

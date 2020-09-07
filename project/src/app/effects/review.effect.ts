@@ -16,16 +16,17 @@ import { of } from 'rxjs';
 
 @Injectable()
 export class ReviewEffects {
-
-  @Effect() loadReviews$ = createEffect(() => this.actions$.pipe(
-    ofType<LoadReview>(REVIEW_TYPES.LOAD_REVIEWS),
-    mergeMap(() =>
-      this.reviewService.getReviewsForARestaurant(1).pipe(
-        map((data) => new LoadReviewSuccess(data)),
-        catchError((error) => of(new LoadReviewFailure(error)))
-      )
+  @Effect() loadReviews$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType<LoadReview>(REVIEW_TYPES.LOAD_REVIEWS),
+      mergeMap((data) => {
+        return this.reviewService.getReviewsForARestaurant(data.payload).pipe(
+          map((data) => new LoadReviewSuccess(data)),
+          catchError((error) => of(new LoadReviewFailure(error)))
+        );
+      })
     )
-  ));
+  );
 
   @Effect() addReview$ = this.actions$.pipe(
     ofType<AddReview>(REVIEW_TYPES.ADD_REVIEW),

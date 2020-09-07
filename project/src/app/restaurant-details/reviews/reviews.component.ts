@@ -33,10 +33,11 @@ export class ReviewsComponent implements OnInit {
     this.reviewList$ = this.store.select((store) => store.review.list);
     this.loading$ = this.store.select((store) => store.review.loading);
     this.error$ = this.store.select((store) => store.review.error);
-
-    this.store.dispatch(new LoadReview());
-
+    
     this.restaurantID = this.route.snapshot.params.id;
+    console.log("ovo je restID", this.restaurantID)
+    this.store.dispatch(new LoadReview(this.restaurantID));
+
     this.isLoggedIn = this.authService.isLoggedIn();
     this.reviewService
       .getReviewsForARestaurant(this.restaurantID)

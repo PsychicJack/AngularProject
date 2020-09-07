@@ -49,7 +49,7 @@ export function ReviewReducer(
         loading: false,
       };
     case REVIEW_TYPES.LOAD_REVIEWS:
-      return { ...state, loading: true };
+      return { ...state, loading: true};
     case REVIEW_TYPES.LOAD_REVIEWS_SUCCESS:
       return {
         ...state,

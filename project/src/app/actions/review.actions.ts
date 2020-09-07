@@ -44,6 +44,7 @@ export class RemoveReviewFailure implements Action {
 
 export class LoadReview implements Action {
   readonly type = REVIEW_TYPES.LOAD_REVIEWS;
+  constructor(public payload: number) {}
 }
 
 export class LoadReviewSuccess implements Action {

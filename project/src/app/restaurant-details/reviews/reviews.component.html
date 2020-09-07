@@ -2,19 +2,5 @@
 
 <div class="w-75 mx-auto mt-4 mb-5">
   <h3>Reviews:</h3>
-  <app-review *ngFor="let review of reviewList" [review]="review"></app-review>
+  <app-review *ngFor="let review of reviewList$ | async" [review]="review"></app-review>
 </div>
-<!--<div>
-  <ul>
-    <li *ngFor="let item of reviewList$ | async">
-      {{item.comment}}
-    </li>
-  </ul>
-</div>
-<div>
-  <ul>
-    <li *ngFor="let item of loading$ | async">
-      {{item.comment}}
-    </li>
-  </ul>
-</div>-->

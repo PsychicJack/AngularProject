@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Actions, Effect, ofType } from '@ngrx/effects';
+import { Actions, Effect, ofType, createEffect } from '@ngrx/effects';
 import {
   LoadReview,
   REVIEW_TYPES,
@@ -17,15 +17,15 @@ import { of } from 'rxjs';
 @Injectable()
 export class ReviewEffects {
 
-  @Effect() loadReviews$ = this.actions$.pipe(
+  @Effect() loadReviews$ = createEffect(() => this.actions$.pipe(
     ofType<LoadReview>(REVIEW_TYPES.LOAD_REVIEWS),
-    mergeMap((data) =>
+    mergeMap(() =>
       this.reviewService.getReviewsForARestaurant(1).pipe(
         map((data) => new LoadReviewSuccess(data)),
         catchError((error) => of(new LoadReviewFailure(error)))
       )
     )
-  );
+  ));
 
   @Effect() addReview$ = this.actions$.pipe(
     ofType<AddReview>(REVIEW_TYPES.ADD_REVIEW),
